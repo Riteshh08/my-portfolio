@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ==========================================
+         METADATA & SEO
+         ========================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ritesh | Portfolio</title>
+    <meta name="description" content="Portfolio of Ritesh, an aspiring Software Engineer and MCA student specializing in Full-Stack development and Automation." />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/assets/avatar.png" />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="#">Ritesh<span>.</span></a>
+        </div>
+        
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Theme Toggle Button -->
+          <button
+            id="theme-toggle"
+            class="theme-btn"
+            aria-label="Toggle Dark Mode"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==========================================
+           HERO SECTION
+           ========================================== -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-wrapper">
+            <div class="hero-text">
+              <h1 class="greeting">
+                Hey there, I'm <span class="highlight">Ritesh!</span> 👋
+              </h1>
+              <p class="bio">
+                Aspiring <strong>Software Engineer</strong> by day, automation
+                connoisseur always. I spend my time building scripts and tools
+                that make life easier—because life is too short for manual
+                tasks.
+              </p>
+              <p class="bio">
+                Currently finishing my <strong>MCA in Pune</strong>, while
+                trying to juggle certification goals, some tiny side projects,
+                and the occasional attempt at writing about my coding journey!
+              </p>
+              <div class="hero-ctas">
+                <a href="your-resume.pdf" download class="btn-primary">
+                  <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                </a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+              </div>
+            </div>
+            <div class="hero-image">
+              <img
+                src="assets/pixelphoto.png"
+                alt="Ritesh Profile Picture"
+                class="profile-pic"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           ACADEMICS SECTION
+           ========================================== -->
+      <section id="academics" class="academics reveal">
+        <div class="container">
+          <h2 class="section-title">Academics<span>.</span></h2>
+          <div class="academic-grid">
+            <article class="academic-item">
+              <div class="academic-left">
+                <span class="status-badge">Present</span>
+                <p class="year">2024 — 2026</p>
+              </div>
+              <div class="academic-right">
+                <h3>Master of Computer Applications (MCA)</h3>
+                <p class="uni">Savitribai Phule Pune University (SPPU)</p>
+                <p class="desc">
+                  Specializing in Full-Stack development and Cybersecurity.
+                  Focused on building secure, scalable applications.
+                </p>
+              </div>
+            </article>
+            
+            <article class="academic-item">
+              <div class="academic-left">
+                <p class="year">2021 — 2024</p>
+              </div>
+              <div class="academic-right">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p class="uni">Pune University Affiliate College</p>
+                <p class="desc">
+                  Foundational studies in programming, database management, and
+                  networking.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SKILLS SECTION
+           ========================================== -->
+      <section id="skills" class="skills reveal">
+        <div class="container">
+          <h2 class="section-title">Technical Skills<span>.</span></h2>
+          <div class="skills-grid">
+            <!-- Frontend Group -->
+            <div class="skill-group">
+              <h3>Frontend</h3>
+              <div class="skill-list">
+                <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+                <span class="skill-pill"><i class="fa-brands fa-react"></i> React</span>
+              </div>
+            </div>
+
+            <!-- Backend Group -->
+            <div class="skill-group">
+              <h3>Backend</h3>
+              <div class="skill-list">
+                <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
+                <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="skill-pill"><i class="fa-solid fa-server"></i> Flask</span>
+                <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                <span class="skill-pill"><i class="fa-solid fa-layer-group"></i> MERN Stack</span>
+              </div>
+            </div>
+
+            <!-- Tools Group -->
+            <div class="skill-group">
+              <h3>Tools</h3>
+              <div class="skill-list">
+                <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+                <span class="skill-pill"><i class="fa-solid fa-terminal"></i> Linux CLI</span>
+                <span class="skill-pill"><i class="fa-solid fa-bug"></i> VAPT / OWASP</span>
+                <span class="skill-pill"><i class="fa-solid fa-envelope-open"></i> Postman</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PROJECTS SECTION
+           ========================================== */ -->
+      <section id="projects" class="projects reveal">
+        <div class="container">
+          <h2 class="section-title">Projects<span>.</span></h2>
+          <div class="projects-grid">
+            <!-- Project 1: QuickServe -->
+            <article class="project-card">
+              <div class="project-content">
+                <div class="project-tags">
+                  <span>MERN Stack</span>
+                  <span>Socket.io</span>
+                </div>
+                <h3>QuickServe</h3>
+                <p>
+                  A real-time restaurant ecosystem for seamless ordering and
+                  management.
+                </p>
+                <div class="project-links">
+                  <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                  <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Aura AI -->
+            <article class="project-card">
+              <div class="project-content">
+                <div class="project-tags">
+                  <span>Flask</span>
+                  <span>Gemini API</span>
+                </div>
+                <h3>Aura AI</h3>
+                <p>
+                  An AI-driven mental wellness companion providing real-time
+                  support.
+                </p>
+                <div class="project-links">
+                  <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                  <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           CONTACT SECTION
+           ========================================== -->
+      <section id="contact" class="contact reveal">
+        <div class="container">
+          <h2 class="section-title">Connect<span>.</span></h2>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <p>
+                I'm always open to discussing new opportunities or security
+                research projects.
+              </p>
+              <div class="social-links">
+                <a href="mailto:ritesh@example.com"><i class="fa-solid fa-paper-plane"></i> Email Me</a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+            
+            <form class="contact-form">
+              <input type="text" placeholder="Name" required aria-label="Name" />
+              <input type="email" placeholder="Email" required aria-label="Email" />
+              <textarea placeholder="Message" rows="5" required aria-label="Message"></textarea>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+      <p>&copy; 2026 Ritesh | Built with Custom CSS</p>
+    </footer>
+
+    <!-- ==========================================
+         STATS WIDGET (Fixed Position)
+         ========================================== -->
+    <div class="stats-widget">
+      <div class="stat-item">
+        <i class="fa-solid fa-clock"></i>
+        <span id="current-time">00:00:00</span>
+      </div>
+      <div class="stat-item">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span id="current-date">Loading...</span>
+      </div>
+      <div class="stat-item">
+        <i class="fa-solid fa-eye"></i>
+        <span id="view-count">0</span> views
+      </div>
+    </div>
+
+    <!-- MAIN SCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
