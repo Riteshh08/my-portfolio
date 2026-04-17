@@ -160,8 +160,15 @@ section {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* Theme Toggle Button */
-.theme-btn {
+/* Theme Toggle & Menu Button */
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-btn,
+.menu-btn {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -177,10 +184,15 @@ section {
   box-shadow: var(--shadow);
 }
 
-.theme-btn:hover {
+.theme-btn:hover,
+.menu-btn:hover {
   background-color: var(--accent);
   color: #ffffff;
   transform: rotate(15deg) scale(1.1);
+}
+
+.menu-btn {
+  display: none; /* Hidden on desktop */
 }
 
 /* ==========================================
@@ -265,6 +277,8 @@ section {
 
 .academic-item:hover {
   transform: translateX(10px); /* Subtle slide on hover */
+  border-color: var(--accent);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .academic-left {
@@ -516,7 +530,22 @@ section {
 }
 
 /* ==========================================
-   12. RESPONSIVE MEDIA QUERIES
+   12. SCROLL REVEAL ANIMATIONS
+   ========================================== */
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ==========================================
+   13. RESPONSIVE MEDIA QUERIES
    ========================================== */
 @media (max-width: 768px) {
   /* Stack hero content */
@@ -535,9 +564,35 @@ section {
     height: 200px;
   }
 
-  /* Hide links on mobile (future: add hamburger menu) */
+  /* Mobile Navigation */
+  .menu-btn {
+    display: flex;
+  }
+
   .nav-links {
-    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    background-color: var(--bg-body);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transform: translateX(100%); /* Start off-screen */
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateX(0); /* Slide in */
+    display: flex; /* Ensure it's shown when active */
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
   }
 
   /* Stack grid layouts */
@@ -572,5 +627,11 @@ section {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  /* Hide time and date in stats widget on mobile */
+  .stats-widget .stat-item:nth-child(1),
+  .stats-widget .stat-item:nth-child(2) {
+    display: none;
   }
 }

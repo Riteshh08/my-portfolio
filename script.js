@@ -114,7 +114,40 @@ function updateStats() {
     viewElement.textContent = views;
 }
 
+// ==========================================
+// 4. MOBILE MENU TOGGLE
+// ==========================================
+
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const menuIcon = menuToggle.querySelector('i');
+
+/**
+ * Toggles the mobile navigation menu.
+ */
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Toggle between bars and xmark icon
+    if (navLinks.classList.contains('active')) {
+        menuIcon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+        menuIcon.classList.replace('fa-xmark', 'fa-bars');
+    }
+});
+
+/**
+ * Closes the mobile menu when a link is clicked.
+ */
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuIcon.classList.replace('fa-xmark', 'fa-bars');
+    });
+});
+
 // Initialize all stats
 updateStats();
 // Run reveal check once on load in case some elements are already visible
 revealOnScroll();
+
