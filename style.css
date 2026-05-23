@@ -24,6 +24,10 @@ body.dark-mode {
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+body.menu-open {
+  overflow: hidden; /* Lock scroll when menu is active */
+}
+
 /* ==========================================
    2. RESET & BASE STYLES
    ========================================== */
@@ -34,7 +38,14 @@ body.dark-mode {
 }
 
 html {
-  scroll-behavior: smooth; /* Enables smooth jumping to sections */
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body {
@@ -49,7 +60,12 @@ body {
   transition:
     background-color 0.3s,
     color 0.3s; /* Smooth theme transition */
-  overflow-x: hidden; /* Prevent horizontal scroll bugs */
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ==========================================
@@ -604,10 +620,10 @@ section {
     gap: 1.5rem;
   }
 
-  .academic-left {
-    border-right: none;
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 10px;
+  .academic-item:hover {
+    transform: none;
+    border-color: var(--accent);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   }
 
   .skill-group h3 {

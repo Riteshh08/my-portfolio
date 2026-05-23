@@ -127,12 +127,14 @@ const menuIcon = menuToggle.querySelector('i');
  */
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    body.classList.toggle('menu-open'); // Prevent background scroll
     
     // Toggle between bars and xmark icon
     if (navLinks.classList.contains('active')) {
         menuIcon.classList.replace('fa-bars', 'fa-xmark');
     } else {
         menuIcon.classList.replace('fa-xmark', 'fa-bars');
+        body.classList.remove('menu-open');
     }
 });
 
@@ -142,6 +144,7 @@ menuToggle.addEventListener('click', () => {
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        body.classList.remove('menu-open');
         menuIcon.classList.replace('fa-xmark', 'fa-bars');
     });
 });
